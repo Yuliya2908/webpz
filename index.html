@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="purple">
+<p> Users:</p>
+<ul>
+{% for user in data %}
+    <li>{{user[0]}} {{user[1]}}</li>
+    {% endfor %}
+</ul>
+
+<form action="" method="post">
+    <p>
+        <label for="name"> Name </label>
+        <input type="text" name="name">
+    </p>
+    <p>
+        <label for="surname"> Surname </label>
+        <input type="text" name="surname">
+    </p>
+    <p>
+        <input type="submit">
+    </p>
+
+</form>
+
+<form action="" method="post">
+    <label>Find:</label>
+    <input type="text" name="id_name">
+    <input type="text" name="id_surname">
+    <br>
+    <label>Change to:</label>
+    <input type="text" name="cg_name">
+    <input type="text" name="cg_surname">
+    <br>
+    <p>
+        <input type="submit">
+    </p>
+</form>
+{% if message != '' %}
+    {{message}}
+{% endif %}
+
+
+</body>
+</html>
